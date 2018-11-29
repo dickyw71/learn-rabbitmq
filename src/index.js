@@ -1,18 +1,18 @@
-import _ from 'lodash'
-import './style.css'
-import Logo from './logo.svg'
+// import _ from 'lodash'
+import printMe from './print.js'
 
 function component() {
     let element = document.createElement('div');
+    let btn = document.createElement('button')
 
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-    element.classList.add('hello')
+    // element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+    element.innerHTML = 'Hello Richard'
+ 
+    btn.innerHTML = 'Click me and check the console.'
+    btn.onclick = printMe
 
-    let _logo = new Image()
-    _logo.src = Logo
+    element.appendChild(btn)
 
-    element.appendChild(_logo)
-    
     return element;
 }
 
